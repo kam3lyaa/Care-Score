@@ -1,4 +1,4 @@
-/* fontes importadas*/
+ /* fontes importadas*/
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -95,6 +95,8 @@
 
 .setor button:hover .fundo{
     bottom: 0 ;
+    height: 80%;
+    opacity: 100%;
 }
 
 /*Recursos*/
@@ -214,7 +216,7 @@
     width: 40px;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 5;
     cursor: pointer;
 }
 
@@ -225,7 +227,7 @@
     width: 35px;
     align-items: center;
     justify-content: center;
-    z-index: 3;
+    z-index: 5;
     cursor: pointer;
 }
 
@@ -459,3 +461,92 @@
     font-size: 13px;
     align-items: center;
 }
+
+/*Setores*/
+
+main{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagina{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(40px);
+
+    transition: 
+    opacity 0.3s,
+    transform 0.3s;
+    
+    pointer-events: none;
+    z-index: 4;
+}
+
+.ativaPagina{
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+/*Página Home*/
+.homePage{
+    display: grid;
+    height: 80%;
+    width: 80%;
+    grid-template-columns: 
+    1fr 1fr 1fr 1fr;
+    grid-template-rows: 
+    1fr
+    1fr;
+    grid-template-areas: 
+    "progresso progresso  lembrete  risco"
+    "atividades atividades mapa mapa"
+    ;
+    gap: 10px;
+}
+
+.homePage .quadroDeProgresso{
+    border:0.5px solid #bebebe;
+    width: 100%;
+    height: 100%;
+    grid-area: progresso;
+}
+
+.homePage .lembreteMaisProximo{
+    background-color: #EEF8FF;
+    border-bottom: 3px solid #055D96;
+    width: 100%;
+    height: 100%;
+    grid-area: lembrete;
+}
+
+.homePage .mensagemDeRisco{
+    border-left: 4px solid #FF3300;
+    width: 100%;
+    height: 100%;
+    grid-area: risco;
+}
+
+.homePage .atividades{
+    /*Bordar Temporária*/
+    border:0.5px solid #bebebe;
+    width: 100%;
+    height: 100%;
+    grid-area: atividades;
+}
+
+.homePage .mapa{
+    border:0.5px solid #bebebe;
+    width: 100%;
+    height: 100%;
+    grid-area: mapa;
+}
+
+

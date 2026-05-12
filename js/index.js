@@ -1,8 +1,8 @@
-// Verificando se há alguema informação salva (Nome do Usuário)
+//Verificando se há alguema informação salva (Nome do Usuário)
 let nome
 let nomeSalvo = localStorage.getItem("nomeUsuario");
 
-// Caso não tenha nenhuma informação salva = solicita o nome do usuário nome e armazena (Trata-se de um dado persistente, ou seja, ela é solicitada apenas uma vez e é salva no navegador do usuário)
+//Caso não tenha nenhuma informação salva = solicita o nome do usuário nome e armazena (Trata-se de um dado persistente, ou seja, ela é solicitada apenas uma vez e é salva no navegador do usuário)
 if (nomeSalvo == null){
     nome = prompt("Digite seu nome")
     localStorage.setItem("nomeUsuario", nome)
@@ -13,18 +13,18 @@ else{
     nome = nomeSalvo
 }
 
-// Modificando elementos HTML de acordo com as infomações encontradas|informadas (Nome do Usuário)
+//Modificando elementos HTML de acordo com as infomações encontradas|informadas (Nome do Usuário)
 document.getElementById("nomeUsuario").innerText = nome
 document.getElementById("avatar").innerText = nome[0]
 
-// TROCANDO PÁGINA
+//BOTÕES PARA TROCAR PÁGINA
 //Lista todas as páginas/setores
 let paginas = document.querySelectorAll(".setor button")
 
 //Percorre cada página/setor
 paginas.forEach(function(pagina){
 
-    //Esculta o clique
+    //Escuta o clique
     pagina.addEventListener("click",function(){
 
         //Remove a classe ativa  de todas as páginas/setores
@@ -42,7 +42,7 @@ paginas.forEach(function(pagina){
 let calendarioElementos = document.querySelector(".recursos .armazenaCalendario")
 let notificacaoElementos = document.querySelector(".recursos .armazenaNotificacao")
 
-//Esculta o clique
+//Escuta o clique
 document.addEventListener("click", function(evento){
 
     //Clique no Calendário
@@ -159,4 +159,39 @@ for(let i = 1; i <= DiasProximoMes ; i++){
     quadradoDiaProximoMes.classList.add("outroMes")
     dias.appendChild(quadradoDiaProximoMes)
 }
+
+
+//CONECTANDO AS PÁGINAS DE NAVEGAÇÕES COM SEUS RESPECTIVOS BOTÕES
+//Resgatando documentos necessários
+
+//Botões
+let botaoHome = document.querySelector(".setor .home")
+let botaoMeuProgresso = document.querySelector(".setor .progresso")
+
+//Elementos das páginas correspondente
+let paginaHome = document.querySelector("main .homePage")
+let paginaMeuProgresso = document.querySelector("main .meuProgressoPage")
+
+//Escuta o clique no botão Home
+botaoHome.addEventListener("click", function(){
+
+    //Remove classe ativa de todas as páginas
+    paginaHome.classList.remove("ativaPagina")
+    paginaMeuProgresso.classList.remove("ativaPagina")
+
+    //Aplica a classe ativa na página correspondente 
+    paginaHome.classList.add("ativaPagina")
+})
+
+//Escuta o clique no botão Meu progresso
+botaoMeuProgresso.addEventListener("click",function(){
+
+    //Remove classe ativa de todas as páginas
+    paginaHome.classList.remove("ativaPagina")
+    paginaMeuProgresso.classList.remove("ativaPagina")
+
+    //Aplica a classe ativa na página correspondente 
+    paginaMeuProgresso.classList.add("ativaPagina")
+})
+
 

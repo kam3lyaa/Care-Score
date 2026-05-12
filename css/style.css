@@ -463,35 +463,44 @@
 }
 
 /*Setores*/
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
 
 main{
     display: flex;
     position: relative;
-    min-height: 100vh;
+    height: calc(100dvh - 70px);
+    width: 100%;
     justify-content: center;
     align-items: center;
 }
 
 .pagina{
+    display: flex;
     position: absolute;
     width: 100%;
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(40px);
-
+    transform: scale(0.98);
     transition: 
     opacity 0.3s,
     transform 0.3s;
-    
     pointer-events: none;
     z-index: 4;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
 }
 
 .ativaPagina{
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
+    transform: scale(1);
     pointer-events: auto;
 }
 
@@ -509,14 +518,15 @@ main{
     "progresso progresso  lembrete  risco"
     "atividades atividades mapa mapa"
     ;
-    gap: 10px;
+    place-items: center;
+    gap: 15px;
 }
 
 .homePage .quadroDeProgresso{
     border:0.5px solid #bebebe;
+    grid-area: progresso;
     width: 100%;
     height: 100%;
-    grid-area: progresso;
 }
 
 .homePage .lembreteMaisProximo{

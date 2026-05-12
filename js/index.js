@@ -169,7 +169,7 @@ let botaoHome = document.querySelector(".setor .home")
 let botaoMeuProgresso = document.querySelector(".setor .progresso")
 
 //Elementos das páginas correspondente
-let paginaHome = document.querySelector("main .homePage")
+let paginaHome = document.querySelector("main .paginaHome")
 let paginaMeuProgresso = document.querySelector("main .meuProgressoPage")
 
 //Escuta o clique no botão Home

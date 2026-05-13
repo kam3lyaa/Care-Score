@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -507,19 +508,19 @@ main{
 /*Página Home*/
 .homePage{
     display: grid;
-    height: 80%;
-    width: 80%;
+    height: 85%;
+    width: 75%;
     grid-template-columns: 
     1fr 1fr 1fr 1fr;
     grid-template-rows: 
     1fr
     1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "progresso progresso  lembrete  risco"
     "atividades atividades mapa mapa"
     ;
     place-items: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .homePage .quadroDeProgresso{
@@ -558,5 +559,73 @@ main{
     height: 100%;
     grid-area: mapa;
 }
+
+/*mapa*/
+.mapa{
+    width: 100%;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px;
+}
+
+.conteudoMapa{
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo"
+        "mapa informacao"
+        "tempo informacao"
+    ;
+    gap: 10px;
+}
+
+#elementoMapa{
+    width: 280px;
+    height: 150px;
+    border-radius: 10px;
+    grid-area: mapa;
+}
+
+.mapa .titulo{
+    font-family: Montserrat;
+    font-size: 17px;
+    grid-area: titulo;
+}
+
+.informacoes{
+    grid-area: informacao;
+    font-family: Instrument Sans;
+    padding: 10px;
+    height: 100%;
+}
+
+.informacoes h4{
+    font-size: 16px;
+    color: hsl(206, 100%, 18%);
+}
+
+.informacoes p{
+    font-size: 12px;
+    color: #5d5d5d;
+}
+
+.informacoes a{
+    font-size: 14px;
+    color: #006fb9;
+}
+
+.carro{
+    width: 22.11px;
+}
+
+.simbolo{
+    width: 13px;
+    transform: rotate(-90deg);
+}
+
+.mapa .tempo{
+    grid-area: tempo;
+    color: #5d5d5d;;
+}
+
 
 

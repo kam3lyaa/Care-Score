@@ -195,3 +195,135 @@ botaoMeuProgresso.addEventListener("click",function(){
 })
 
 
+//MAPA
+//Armazenando endereços das clínicas
+const clinicas = [
+
+    { //Localização Cliníca 1
+        nome: "Barueri, Unidade Alphaville",
+        lat: -23.498192,
+        lng: -46.853034,
+    },
+
+    { //Localização Clínica 2
+        nome: "São Paulo, Unidade Brooklin",
+        lat: -23.609930,
+        lng: -46.696056,
+    },
+
+    { //Localização Clínica 3
+        nome: "São Paulo, Unidade Campo Belo",
+        lat: -23.616163,
+        lng: -46.674416,
+    },
+
+    { //Localização Clínica 4
+        nome: "São Paulo, Unidade Morumbi",
+        lat: -23.622160,
+        lng: -46.698201,
+    },
+
+    { //Localização Clínica 5
+        nome: "São Paulo, Unidade Paulista",
+        lat: -23.556605,
+        lng: -46.659591,
+    },
+
+    { //Localização Clínica 6
+        nome: "São Paulo, Unidade Vila Olímpia",
+        lat: -23.594726,
+        lng: -46.686230,
+    },
+
+    { //Localização Clínica 7
+        nome: "Rio de Janeiro, Unidade Rio Sul",
+        lat: -22.957236,
+        lng: -43.176265,
+    },
+
+    { //Localização Clínica 8
+        nome: " São Paulo, Unidade Pinheiros",
+        lat: -23.566841,
+        lng: -46.688522
+    }
+
+]
+
+//Pede acesso ao usuário da localização
+navigator.geolocation.getCurrentPosition((position) => {
+
+    //Se for permitido, ele armazena as informações de localização do usuário
+    const userLatitude = position.coords.latitude;
+    const userLongitude = position.coords.longitude;
+
+    console.log(userLatitude, userLongitude)
+
+    //Criando variáveis que armazenára a unidade mais próxima e a menor distância
+    let unidadeMaisProxima = null
+    let menorDistancia = Infinity;
+
+    //Descobrindo a clínica com menor distância
+    clinicas.forEach((clinica) =>{
+        const distancia = calcularDistancia(
+            userLatitude,
+            userLongitude,
+            clinica.lat,
+            clinica.lng
+        )
+
+        if(distancia < menorDistancia){
+            menorDistancia = distancia;
+            unidadeMaisProxima = clinica;
+        }
+
+    })
+
+    //Criando mapa a partir da localização do usuário
+    const map = L.map('elementoMapa',{
+
+        //Mapa estático
+        zoomControl: false,
+        attributionControl: false
+
+    }).setView([unidadeMaisProxima.lat, unidadeMaisProxima.lng], 16);
+
+    //Layer/Design do mapa
+    const layer = L.tileLayer('https://tile.openstreetmap.de/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+    //Adicionando layer ao mapa
+    layer.addTo(map)
+
+    //Marcador que sinaliza a localização do usuário no mapa
+    L.marker([userLatitude, userLongitude]).addTo(map)
+
+    //Marcar todas as clínicas no mapa
+    clinicas.forEach((clinica) => {
+        L.marker([clinica.lat, clinica.lng]).addTo(map)
+    })
+
+    function calcularDistancia(lat1, lon1, lat2, lon2) {
+
+        return Math.sqrt(
+        Math.pow(lat2 - lat1, 2) +
+        Math.pow(lon2 - lon1, 2)
+    )
+    }
+
+    //TEMPO DE DESLOCAMENTO
+    const distanciaKm = menorDistancia * 111;
+
+    //Velocidade fixa utilizada
+    const velocidadeMedia = 40;
+    
+    //Calculando a média de tempo que o usuário levará de deslocamento (fixo)
+    const tempoHoras = distanciaKm / velocidadeMedia
+    const tempoMinutos = tempoHoras * 60;
+    const tempoFinal = Math.round(tempoMinutos);
+
+    console.log(tempoFinal)
+
+});
+

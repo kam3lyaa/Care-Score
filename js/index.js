@@ -17,6 +17,11 @@ else{
 document.getElementById("nomeUsuario").innerText = nome
 document.getElementById("avatar").innerText = nome[0]
 
+document.getElementById("nomeUsuarioPageUm").innerText = nome
+document.getElementById("nomeUsuarioPageDois").innerText = nome
+document.getElementById("avatarUm").innerText = nome[0]
+document.getElementById("avatarDois").innerText = nome[0]
+
 //BOTÕES PARA TROCAR PÁGINA
 //Lista todas as páginas/setores
 let paginas = document.querySelectorAll(".setor button")
@@ -304,6 +309,8 @@ navigator.geolocation.getCurrentPosition((position) => {
         L.marker([clinica.lat, clinica.lng]).addTo(map)
     })
 
+
+    //Calculando tempo de deslocamento aproximadamente (não é exato)
     function calcularDistancia(lat1, lon1, lat2, lon2) {
 
         return Math.sqrt(
@@ -312,7 +319,6 @@ navigator.geolocation.getCurrentPosition((position) => {
     )
     }
 
-    //TEMPO DE DESLOCAMENTO
     const distanciaKm = menorDistancia * 111;
 
     //Velocidade fixa utilizada
@@ -325,5 +331,14 @@ navigator.geolocation.getCurrentPosition((position) => {
 
     console.log(tempoFinal)
 
+
+    //Craindo link de rota de acordo com a localização do usuário e da clínica mais próxima
+    const rotaGoogleMaps = `https://www.google.com/maps/dir/${userLatitude},${userLongitude}/${unidadeMaisProxima.lat},${unidadeMaisProxima.lng}`;
+
+    //Resgatando documentos necessários
+    const linkRota = document.getElementById("linkRota")
+    linkRota.href = rotaGoogleMaps
+
+    linkRota.target = "_blanck"
 });
 

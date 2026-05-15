@@ -322,15 +322,19 @@ navigator.geolocation.getCurrentPosition((position) => {
     const distanciaKm = menorDistancia * 111;
 
     //Velocidade fixa utilizada
-    const velocidadeMedia = 40;
+    const velocidadeMedia = 55;
     
     //Calculando a média de tempo que o usuário levará de deslocamento (fixo)
     const tempoHoras = distanciaKm / velocidadeMedia
     const tempoMinutos = tempoHoras * 60;
     const tempoFinal = Math.round(tempoMinutos);
 
-    console.log(tempoFinal)
+    //Corrigindo o horário
+    const horas = Math.floor(tempoFinal / 60);
+    const minutos = tempoFinal % 60;
 
+    const horario = document.getElementById("horario")
+    horario.innerText = `${horas}h ${minutos}min`;
 
     //Craindo link de rota de acordo com a localização do usuário e da clínica mais próxima
     const rotaGoogleMaps = `https://www.google.com/maps/dir/${userLatitude},${userLongitude}/${unidadeMaisProxima.lat},${unidadeMaisProxima.lng}`;

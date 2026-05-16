@@ -346,3 +346,27 @@ navigator.geolocation.getCurrentPosition((position) => {
     linkRota.target = "_blanck"
 });
 
+//MODAL DO ELEMENTO ATIVIDADES
+//Resgatando documentos necessários
+const botaoAtividades = document.querySelector(".atividades a")
+const modalUm = document.querySelector(".modalUm")
+const blocoModal = document.querySelector(".modalUm .blocoModalUm")
+
+//
+botaoAtividades.addEventListener("click", function(event){
+    event.stopPropagation()
+    event.preventDefault()
+    modalUm.classList.add("ativo")
+})
+
+//Ouve o clique na parte escura do modal
+modalUm.addEventListener("click", function(){
+
+    //Fecha o model
+    modalUm.classList.remove("ativo")
+});
+
+//Até ouve o clique no bloco principal de model mas não realiza nenhuma ação
+blocoModal.addEventListener("click", function(event){
+    event.stopPropagation()
+})

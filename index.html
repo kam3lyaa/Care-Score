@@ -67,9 +67,31 @@
                         <!--Barra branca-->
                         <div class="fundo quatro"></div>
                         <!--Notificação-->
-                        <div class="elementoNotificacao"></div>
+                        <div class="elementoNotificacao">
+                            <div class="blocoNotificacao">
+                                <div class="notificacaoUm">
+                                    <div class="iconNotificacao">
+                                        <img src="assets/icons/PresenteNotificaçãoIcon.png" alt="Presente Icon">
+                                    </div>
+                                    <div class="textoNotificacaoUm">
+                                        <h6>Nova recompensa disponível</h6>
+                                        <p>Você desbloqueou um benefício </p>
+                                        <p>Confira seus descontos diponíveis</p>
+                                    </div>
+                                </div>
+                                <div class="divisao"></div>
+                                <div class="notificacaoDois">
+                                     <div class="iconNotificacao dois">
+                                        <img src="assets/icons/CalendárioConfirmaNotificaçãoIcon.png" alt="Presente Icon">
+                                    </div>
+                                    <div class="textoNotificacaoUm">
+                                        <h6>Consulta Próxima</h6>
+                                        <p>Sua consulta é amanhã às 14:00h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
                 <!--Recursos Ativos-->
                 <div class="iconRecursosAtivo"></div>
@@ -108,13 +130,113 @@
                 <div class="quadroDeProgresso">
                 </div>
 
+                <!--Lembrete-->
                 <div class="lembreteMaisProximo">
+                    <div class="elementosLembrete">
+                        <div class="tituloLembrete">
+                            <h6>Próxima Consulta</h6>
+                        </div>
+                        <div class="textoLembrete">
+                            <p class="subtitulo">Cardiologia - Dr. Silva</p>
+                            <div class="infoLembrete">
+                                <img src="assets/icons/CalendárioLembreteIcon.png" alt="Calendário Icon">
+                                <p>30 de maio de 2026</p>
+                            </div>
+                            <div class="infoLembrete">
+                                <img src="assets/icons/RelógioIcon.png" alt="Relógio Icon">
+                                <p>14:00h</p>
+                            </div>
+                        </div>
+
+                        <div class="confirmaLembrete">
+                            <p>Confirme sua presença</p>
+                            <div class="botoesLembrete">
+                                <button class="um">Confirmar</button>
+                                <button class="dois">Remarcar</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
+                <!--Mensagem de Risco-->
                 <div class="mensagemDeRisco">
+                    <div class="blocoRisco">
+                        <div class="tituloRisco">
+                            <h5>Risco de Ausência: </h5>
+                            <div class="alerta">
+                                <p>Médio</p>
+                            </div>
+                        </div>
+                        <div class="textoRiscoDois">
+                            <p>Motivo:</p>
+                            <div>
+                                <p class="texto">1. Trânsito no horário</p>
+                                <p class="texto">2. Histórico recente</p>
+                            </div>
+                        </div>
+                        <div class="textoRisco">
+                            <p>Recomendação: Sair com 20 min de</p>
+                            <p>atencendência</p>
+                        </div>
+                        <button>Surgerir Reagendamento</button>
+                    </div>
                 </div>
 
                 <div class="atividades">
+                    <h5 class="tituloAtividade">Atividades</h5>
+                    <a href="">Ver tudo 
+                        <img class="" src="assets/icons/SiboloIcon.png" alt="Simbolo Icon">
+                    </a>
+
+                    <!--Atividade 1-->
+                    <div class="conteudoAtividade">
+                        <div class="elementoAtividade">
+                            <div class="parteSuperiorAtiv">
+                                <div class="imgAtividade">
+                                    <img src="assets/icons/DinheiroIcon.png" alt="Dinheiro Icon">
+                                </div>
+                            </div>
+                            <div class="parteInferiorAtiv">
+                                <h6>Desconto em </h6>
+                                <h6>Exames</h6>
+                                <p class="texto">10% de Desconto</p>
+                                <button type="botaoAtiv">Disponível</button>
+                                <p class="status">Válido até 30/06/2026</p>
+                            </div>
+                        </div>
+
+                        <!--Atividade 2-->
+                        <div class="elementoAtividade">
+                            <div class="parteSuperiorAtiv">
+                                <div class="imgAtividade">
+                                    <img src="assets/icons/CalendárioConfirmaIcon.png" alt="Calendário Icon">
+                                </div>
+                            </div>
+                            <div class="parteInferiorAtiv">
+                                <h6>Consulta </h6>
+                                <h6>Confirmada</h6>
+                                <p class="texto">+ 2 pontos</p>
+                                <button type="botaoAtiv">Concluído</button>
+                                <p class="status">10/05/2026</p>
+                            </div>
+                        </div>
+
+                        <!--Atividade 3-->
+                        <div class="elementoAtividade">
+                            <div class="parteSuperiorAtiv">
+                                <div class="imgAtividade">
+                                    <img src="assets/icons/PresenteIcon.png" alt="Presente Icon">
+                                </div>
+                            </div>
+                            <div class="parteInferiorAtiv">
+                                <h6>Desconto em </h6>
+                                <h6>Medicamentos</h6>
+                                <p class="texto">5% de Desconto</p>
+                                <button type="botaoAtiv">Resgatado</button>
+                                <p class="status">15/05/2026</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!--Mapa-->
@@ -138,8 +260,67 @@
                     </div>
                 </div>
             </div>
-
         </section>
+
+         <!--Modal-->
+        <div class="modalUm">
+            <div class="elementoModalUm">
+                <div class="blocoModalUm">
+                    <div class="blocoAtividades">
+
+                        <!--Atividade 1-->
+                        <div class="conteudoAtividade">
+                            <div class="elementoAtividade um">
+                                <div class="parteSuperiorAtiv">
+                                    <div class="imgAtividade">
+                                        <img src="assets/icons/DinheiroIcon.png" alt="Dinheiro Icon">
+                                    </div>
+                                </div>
+                                <div class="parteInferiorAtiv">
+                                    <h6>Desconto em </h6>
+                                    <h6>Exames</h6>
+                                    <p class="texto">10% de Desconto</p>
+                                    <button type="botaoAtiv">Disponível</button>
+                                    <p class="status">Válido até 30/06/2026</p>
+                                </div>
+                            </div>
+
+                            <!--Atividade 2-->
+                            <div class="elementoAtividade dois">
+                                <div class="parteSuperiorAtiv">
+                                    <div class="imgAtividade">
+                                        <img src="assets/icons/CalendárioConfirmaIcon.png" alt="Calendário Icon">
+                                    </div>
+                                </div>
+                                <div class="parteInferiorAtiv">
+                                    <h6>Consulta </h6>
+                                    <h6>Confirmada</h6>
+                                    <p class="texto">+ 2 pontos</p>
+                                    <button type="botaoAtiv">Concluído</button>
+                                    <p class="status">10/05/2026</p>
+                                </div>
+                            </div>
+
+                            <!--Atividade 3-->
+                            <div class="elementoAtividade tres">
+                                <div class="parteSuperiorAtiv">
+                                    <div class="imgAtividade">
+                                        <img src="assets/icons/PresenteIcon.png" alt="Presente Icon">
+                                    </div>
+                                </div>
+                                <div class="parteInferiorAtiv">
+                                    <h6>Desconto em </h6>
+                                    <h6>Medicamentos</h6>
+                                    <p class="texto">5% de Desconto</p>
+                                    <button type="botaoAtiv">Resgatado</button>
+                                    <p class="status">15/05/2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!--Conteúdo da página Meu progresso-->
         <section class="pagina meuProgressoPage">
@@ -165,7 +346,7 @@
 
                 </div>
                 <div class="niveis" >
-                    <h5>Níveis</h5>
+                    <h5 >Níveis</h5>
                     <h6 class="subtituloUm">Seu nível atual</h6>
                     <div class="conteudoNivel">
                         <div class="nivelAtual">

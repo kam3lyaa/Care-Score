@@ -1,4 +1,4 @@
- /* fontes importadas*/
+/* fontes importadas*/
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -95,7 +95,7 @@
 }
 
 .setor button:hover .fundo{
-    bottom: 0 ;
+    bottom: 0;
     height: 80%;
     opacity: 100%;
 }
@@ -165,7 +165,6 @@
     font-weight: 500;
 }
 
-
 .home{
     display: flex;
     background: none;
@@ -178,7 +177,6 @@
     justify-content: center;
     width: 60px;
 }
-
 
 .progresso{
     display: flex;
@@ -203,7 +201,6 @@
 }
 
 .iconRecursos{
-    height: 18px;
     display: flex;
     gap: 10px;
     height: 100%;
@@ -348,14 +345,12 @@
     font-size: 13.5px;
     padding: 2px 15px 20px 15px;
     font-family: Inter;
-
 }
 
 .armazenaCalendario.aberto .gridDiasCalendario{
     display: grid;
     justify-content: center;
     align-items: center;
-
     grid-template-columns: repeat(7, 25px);
     width: 100%;
     height: 100%;
@@ -430,7 +425,6 @@
     background-image: url("../assets/icons/NotificaçãoAtiva.png");
 }
 
-
 .notificacao{
     background-image: url("../assets/icons/NotificaçãoIcon.png");
     background-size: contain;
@@ -451,7 +445,7 @@
     background-color: #EBEBEB;
     padding: 19px;
     border-radius: 100%;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -486,76 +480,36 @@ main{
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: scale(0.995) translateZ(0);
-    transition:
-    opacity 0.2s,
-    transform 0.2s,
-    visibility 0s linear 0.2s;
-    pointer-events: none;
-    z-index: 4;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    will-change: opacity, transform;
-}
-
-.ativaPagina{
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1) translateY(0);
-    pointer-events: auto;
-    transition:
-    opacity 0.2s,
-    transform 0.2s,
-    visibility 0s;
-}
-
-/*
-
-.pagina{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
     transform: scale(0.98);
     transition: 
-    opacity 0.3s,
-    transform 0.3s;
+        opacity 0.3s,
+        transform 0.3s;
     pointer-events: none;
     z-index: 4;
     justify-content: center;
     align-items: center;
     top: 0;
     left: 0;
-    will-change: opacity, transform;
 }
 
 .ativaPagina{
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
     transform: scale(1);
     pointer-events: auto;
-
-*/
+}
 
 /*Página Home*/
 .homePage{
     display: grid;
-    height: 100%;
-    width: 75%;
-    grid-template-columns: 
-    1fr 1.5fr 1.3fr 1fr;
-    grid-template-rows: 
-    5%
-    1fr
-    1fr;
+    height: 98%;
+    width: 69%;
+    grid-template-columns: 1fr 1.5fr 1.3fr 1fr;
+    grid-template-rows: 7% 1fr 1fr;
     grid-template-areas:
-    "usuario usuario usuario usuario"
-    "progresso progresso  lembrete  risco"
-    "atividades atividades mapa mapa"
+        "usuario usuario usuario usuario"
+        "progresso progresso lembrete risco"
+        "atividades atividades mapa mapa"
     ;
     place-items: center;
     gap: 30px 20px;
@@ -563,7 +517,7 @@ main{
 }
 
 .homePage .quadroDeProgresso{
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     grid-area: progresso;
     width: 100%;
     height: 100%;
@@ -571,6 +525,7 @@ main{
 }
 
 .homePage .lembreteMaisProximo{
+    background-color: #EEF8FF;
     border-bottom: 3px solid #055D96;
     width: 100%;
     height: 100%;
@@ -585,13 +540,14 @@ main{
 }
 
 .homePage .atividades{
+    border: 0.5px solid #bebebe;
     width: 100%;
     height: 100%;
     grid-area: atividades;
 }
 
 .homePage .todoMapa{
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     width: 100%;
     height: 100%;
     grid-area: mapa;
@@ -606,7 +562,7 @@ main{
     width: 100%;
 }
 
-/*mapa*/
+/*Mapa*/
 .conteudoMapa{
     display: grid;
     grid-template-areas: 
@@ -614,16 +570,8 @@ main{
         "mapa informacao"
         "tempo informacao"
     ;
-    grid-template-columns: 
-    minmax(0, 2fr)
-    minmax(0, 1fr);
-
-    grid-template-rows: 
-    1%
-    1fr
-    30%
-    ;
-
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-rows: 1% 1fr 30%;
     height: 100%;
 }
 
@@ -631,7 +579,6 @@ main{
     display: flex;
     position: absolute;
     z-index: 1;
-    background-color: #FF3300;
 }
 
 #elementoMapa{
@@ -674,7 +621,6 @@ main{
     color: #006fb9;
     text-decoration: none;
     font-weight: 500;
-
 }
 
 .carro{
@@ -708,120 +654,306 @@ main{
 .paginaMeuProgresso{
     display: grid;
     grid-template-areas: 
-    "usuario usuario usuario usuario"
-    "checkIn consultas pontos niveis"
+        "usuario usuario usuario usuario"
+        "checkIn consultas pontos niveis"
     ;
-    grid-template-columns: 
-    1fr 1fr 1fr 1fr;
-    grid-template-rows: 
-    auto
-    1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
     width: 80%;
     height: 87%;
     place-items: center;
     gap: 30px 40px;
 }
 
+/* ===== CHECK-IN ===== */
+
 .checkIn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     background-color: #ffffff;
     box-shadow: -7px -7px 0px hsl(206, 100%, 18%);
     grid-area: checkIn;
 }
 
+.tituloCard{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a2e4a;
+    align-self: center;
+    margin-bottom: 4px;
+    font-family: Montserrat;
+}
+
+.checkInIcone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.circuloCheck{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #e8f0fe;
+    border: 3px solid #1565C0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circuloCheck i{
+    font-size: 28px;
+    color: #1565C0;
+}
+
+.pontosConfirmados{
+    font-size: 22px;
+    font-weight: 700;
+    color: #1565C0;
+    margin: 0;
+    font-family: Montserrat;
+}
+
+.legendaPontos{
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.consultaConfirmada{
+    background-color: #f0f0f0;
+    border-radius: 6px;
+    padding: 10px 14px;
+    width: 100%;
+}
+
+.labelConfirmada{
+    font-size: 11px;
+    color: #888;
+    margin: 0 0 2px 0;
+    font-family: Instrument Sans;
+}
+
+.nomeConsulta{
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2e4a;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.horarioConsulta{
+    font-size: 12px;
+    color: #555;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.proximasConsultasCheck{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.labelProximas{
+    font-size: 12px;
+    color: #888;
+    margin: 0 0 4px 0;
+    font-family: Instrument Sans;
+}
+
+.itemConsultaCheck{
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #f5f5f5;
+}
+
+.itemConsultaCheck.ativa{
+    background-color: #dbeafe;
+    border-left: 3px solid #1565C0;
+}
+
+.nomeConsultaCheck{
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2e4a;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.detalhesConsultaCheck{
+    font-size: 11px;
+    color: #555;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.pontosConsultaCheck{
+    font-size: 11px;
+    color: #1565C0;
+    font-weight: 600;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+/* ===== CONSULTAS ===== */
+
 .consultas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     background-color: #ffffff;
     box-shadow: -7px -7px 0px hsl(206, 100%, 18%);
     grid-area: consultas;
 }
 
+.listaConsultas{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.itemConsulta{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #f5f5f5;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.itemConsulta .barraLateral{
+    width: 4px;
+    flex-shrink: 0;
+}
+
+.itemConsulta.realizada .barraLateral{
+    background-color: #22c55e;
+}
+
+.itemConsulta.cancelada .barraLateral{
+    background-color: #a3a3a3;
+}
+
+.itemConsulta.falta .barraLateral{
+    background-color: #ef4444;
+}
+
+.infoConsulta{
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    gap: 2px;
+}
+
+.nomeItemConsulta{
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a2e4a;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.dataItemConsulta{
+    font-size: 11px;
+    color: #555;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.itemConsulta.realizada .pontosItemConsulta{
+    font-size: 11px;
+    font-weight: 600;
+    color: #22c55e;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.itemConsulta.cancelada .pontosItemConsulta{
+    font-size: 11px;
+    font-weight: 600;
+    color: #a3a3a3;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.itemConsulta.falta .pontosItemConsulta{
+    font-size: 11px;
+    font-weight: 600;
+    color: #ef4444;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.btnHistorico{
+    width: 100%;
+    padding: 10px;
+    background-color: hsl(206, 100%, 18%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: Instrument Sans;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: auto;
+    transition: background-color 0.2s;
+}
+
+.btnHistorico:hover{
+    background-color: #1565C0;
+}
+
+/* ===== MEUS PONTOS ===== */
+
 .meusPontos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px;
+    overflow-y: auto;
     width: 100%;
     height: 100%;
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     background-color: #ffffff;
     box-shadow: -7px -7px 0px hsl(206, 100%, 18%);
     grid-area: pontos;
 }
 
+/* ===== NÍVEIS ===== */
+
 .niveis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    gap: 6px;
     width: 100%;
     height: 100%;
-    border:0.5px solid #bebebe;
+    border: 0.5px solid #bebebe;
     background-color: #ffffff;
     box-shadow: -7px -7px 0px hsl(206, 100%, 18%);
     grid-area: niveis;
-}
-
-/*Saudação*/
-.usuarioInfo{
-    display: grid;
-    grid-template-areas:  
-    "icon saudacao"
-    "icon nome"
-    ;
-    grid-template-columns: 
-    5% 1fr
-    ;
-    grid-template-rows: 
-    25% 
-    1fr
-    ;
-    font-size: 15px;
-    font-family: Geologica;
-}
-
-.usuarioInfo p{
-    grid-area: saudacao;
-    font-size: 14px;
-}
-
-#nomeUsuarioPageUm{
-    margin: 1;
-    font-size: 18px;
-    grid-area: nome;
-    font-weight: 500;
-}
-
-#avatarUm{
-    display: flex;
-    width: 9px;
-    height: 9px;
-    background-color: #dddddd;
-    padding: 19px;
-    border-radius: 100%;
-    align-items:center;
-    justify-content: center;
-    grid-area: icon;
-    color: #5E5D5D;
-}
-
-#avatarDois{
-    display: flex;
-    width: 9px;
-    height: 9px;
-    background-color: #EBEBEB;
-    padding: 19px;
-    border-radius: 100%;
-    align-items:center;
-    justify-content: center;
-    grid-area: icon;
-}
-
-.niveis{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 15px;
     min-width: 0;
-    height: 100%;
-    gap: 6px;
-    width: 100%;
+    overflow-y: auto;
 }
 
 .nivelAtual{
@@ -832,7 +964,6 @@ main{
     align-items: center;
     column-gap: 13px;
     padding-left: 20px;
-
 }
 
 .informacaoNivelAtual p{
@@ -840,7 +971,6 @@ main{
     color: #5E5D5D;
     line-height: 1;
     width: 100%;
-
 }
 
 .informacoesOutrosniveis p{
@@ -897,7 +1027,6 @@ main{
     font-family: Montserrat;
     color: black;
 }
-
 
 .textoNivelUm{
     display: flex;
@@ -968,7 +1097,6 @@ main{
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    grid-area: icon;
     flex-shrink: 0;
 }
 
@@ -977,8 +1105,7 @@ main{
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    grid-area: icon;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .corTres{
@@ -986,8 +1113,7 @@ main{
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    grid-area: icon;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .corQuatro{
@@ -995,474 +1121,195 @@ main{
     width: 13px;
     height: 13px;
     border-radius: 100%;
-    grid-area: icon;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
-/*Setor Atividade*/
-.atividades .tituloAtividade{
+/*Saudação*/
+.usuarioInfo{
+    display: grid;
+    grid-template-areas:  
+        "icon saudacao"
+        "icon nome"
+    ;
+    grid-template-columns: 5% 1fr;
+    grid-template-rows: 25% 1fr;
     font-size: 15px;
-    font-family: Montserrat;
 }
 
-.conteudoAtividade .elementoAtividade{
-    width: 100%;
-    height: 100%;
-    background-color: #ddeef8;
-    padding: 10px;
+.usuarioInfo p{
+    grid-area: saudacao;
 }
 
-.conteudoAtividade{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 200px;
-    gap: 10px;
-}
-
-.atividades .imgAtividade img{
-    width: 20px;
-}
-
-.imgAtividade{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 40px;
-    border-radius: 100%;
-    background-color: #b1d6ee;
-}
-
-.elementoAtividade button{
-    height: 36px;
-    width: 75%;
-    border: 2px solid #00335B;
-    background-color: transparent;
-    border-radius: 6px;
-    font-size: 13px;
-    font-family: Instrument Sans;
-    font-weight: 700;
-    color: #00335B;
-    pointer-events: none;
-}
-
-.atividades .texto{
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-
-.atividades .parteSuperiorAtiv{
-    height: 39%;
-    padding-top: 5px;
-}
-
-.atividades .parteInferiorAtiv{
-    height: 80%;
-    font-family: Instrument Sans;
-}
-
-.atividades .parteInferiorAtiv p{
-    margin: 0;
-    font-size: 10px;
-}
-
-.atividades .parteInferiorAtiv h6{
-    margin: 0;
-    font-size: 14px;
-    color: #00335B;
-}
-
-.atividades .parteInferiorAtiv .status{
-    padding-top: 5px;
-    color: #949494;
-}
-
-.atividades a img{
-    width: 11px;
-    height: 100%;
-    transform: rotate(-90deg);
-}
-
-.atividades{
-    position: relative;
-}
-
-.atividades a{
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-decoration: none;
-    justify-content: center;
-    font-size: 12.5px;
-    align-items: center;
-    width: 80px;
-    font-weight: 500;
-}
-
-.modalUm{
-    position: fixed;
-    top: 0;
-    width: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: hsl(0, 0%, 0%, 15%);
-    z-index: 10;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-}
-
-.modalUm.ativo{
-    opacity: 1;
-    visibility: visible;
-}
-
-.elementoModalUm{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modalUm .blocoModalUm{
-    border-radius:3px;
-    display: flex;
-    width: 650px;
-    height: 450px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 20px hsl(0, 0%, 0%, 10%);
-    overflow-y: scroll;
-    transform: 
-    scale(0.4)
-    translateY(30px);
-    transition: 0.3s;
-}
-
-.modalUm.ativo .blocoModalUm{
-    transform: scale(1);
-}
-
-.modalUm .imgAtividade img{
-    width: 20px;
-}
-
-.modalUm .blocoAtividades{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 35px;
-}
-
-
-.modalUm .texto{
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-
-.modalUm .parteSuperiorAtiv{
-    height: 39%;
-    padding-top: 5px;
-}
-
-.modalUm .parteInferiorAtiv{
-    height: 80%;
-    font-family: Instrument Sans;
-}
-
-.modalUm .parteInferiorAtiv p{
-    margin: 0;
-    font-size: 10px;
-}
-
-.modalUm .parteInferiorAtiv h6{
-    margin: 0;
-    font-size: 14px;
-    color: #00335B;
-}
-
-.modalUm .parteInferiorAtiv .status{
-    padding-top: 5px;
-    color: #949494;
-}
-
-/*Notificação*/
-.recursos .blocoNotificacao{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.notificacaoUm{
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    transition: 0.2s;
-}
-
-.armazenaNotificacao.aberto .notificacaoUm{
-    opacity: 1;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
-
-.textoNotificacaoUm p{
-    margin: 2px;
-    font-size: 11px;
-    color:#5E5D5D;
-    font-family: Instrument Sans;
-    line-height: 1;
-}
-
-.textoNotificacaoUm h6{
-    font-family: Geologica;
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-.iconNotificacao{
-    width: 45px;
-    height: 45px;
-    background-color: #FFC1A5;
-    border-radius: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.iconNotificacao img{
-    width: 30px;
-    height: 30px;
-}
-
-.iconNotificacao.dois img{
-    width: 27px;
-    height: 27px;
-}
-
-.notificacaoDois{
-    opacity: 0;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    padding-left: 19px;
-    align-items: center;
-    gap: 15px;
-    transition: 0.2s;
-}
-
-.armazenaNotificacao.aberto .notificacaoDois{
-    opacity: 1;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    padding-left: 19px;
-    align-items: center;
-    gap: 15px;
-}
-
-.elementoNotificacao .divisao{
-    width: 90%;
-    height: 3px;
-    background-color: #eeeeee;
-    display: flex;
-    justify-content: center;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-/*Mensagem de erro*/
-.blocoRisco{
-    display: flex;
-    flex-direction: column;
-    height: 101%;
-    padding-left: 18px;
-    width: 140%;
-    gap: 19px;
-}
-
-.blocoRisco .tituloRisco{
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.blocoRisco .alerta{
-    display: flex;
-    height: 26px;
-    background-color: #FFC1A5;
-    width: 70px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-}
-
-.blocoRisco .tituloRisco h5{
-    display: flex;
-    margin: 0;
+#nomeUsuarioPageUm{
     font-size: 18px;
-    font-family: Montserrat;
-    align-items: center;
-    height: 100%
+    grid-area: nome;
 }
 
-.blocoRisco .alerta p{
-    margin: 0;
+#nomeUsuarioPageDois{
+    font-size: 18px;
+    grid-area: nome;
+}
+
+#avatarUm{
     display: flex;
-    justify-content: center;
+    width: 9px;
+    height: 9px;
+    background-color: #EBEBEB;
+    padding: 19px;
+    border-radius: 100%;
     align-items: center;
-    color: #FF3300;
-    font-size: 16px;
+    justify-content: center;
+    grid-area: icon;
 }
 
-.blocoRisco .textoRisco p{
-    margin: 0px;
-    line-height: 1;
+#avatarDois{
+    display: flex;
+    width: 9px;
+    height: 9px;
+    background-color: #EBEBEB;
+    padding: 19px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    grid-area: icon;
+}
+
+/* ===== MEUS PONTOS ===== */
+
+/* Badge azul "Nível Prata" */
+.badgeNivel{
+    background-color: #1565C0;
+    color: white;
     font-size: 11px;
-    font-family: Instrument Sans;
-    color: #5E5D5D;
-}
-
-.blocoRisco .textoRiscoDois p{
-    margin: 0;
-    font-size: 14px;
-}
-
-.blocoRisco .textoRiscoDois .texto{
-    font-size: 13px;
-    line-height: 1;
-    font-family: Instrument Sans;
-}
-
-.blocoRisco button{
-    border: 2px solid #FF3300;
-    width: 70%;
-    font-size: 12px;
-    background-color: transparent;
-    border-radius: 6px;
-    height: 22%;
-    color: #FF3300;
     font-weight: 600;
     font-family: Instrument Sans;
-    transition: 0.15s;
+    padding: 4px 14px;
+    border-radius: 20px;
 }
 
-.blocoRisco button:hover{
-    color: white;
-    background-color: #FF3300;
-}
-
-/*Lembrete*/
-.lembreteMaisProximo .elementosLembrete{
-    gap: 10px;
-    padding-left: 16px;
-    padding-top: 12px;
-    margin: 0;
-    background-color: #EEF8FF;
-    height: 100%;
-}
-
-.lembreteMaisProximo .textoLembrete img{
-    width: 12px;
-    height: 12px;
-}
-
-.lembreteMaisProximo .infoLembrete{
+/* Número grande de pontos */
+.totalPontos{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding-bottom: 10px;
+    gap: 2px;
+}
+
+.numeroPontos{
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a2e4a;
     margin: 0;
-    padding: 1px;
-}
-
-.lembreteMaisProximo .textoLembrete .infoLembrete p{
-    display: flex;
-    height: 100%;
-    align-items: center;
-    margin: 0;
-    font-size: 12px;
-    font-family: Instrument Sans;
-    color: #474747;
-}
-
-.elementosLembrete .confirmaLembrete p{
-    line-height: 1;
-    margin-bottom: 6.5px;
-    margin-top: 15px;
-    font-size: 12px;
-    font-family: Instrument Sans;
-    color: #474747;
-}
-
-.elementosLembrete .subtitulo{
-    margin-bottom: 13px;
-    margin-top: 9px;
-    font-size: 14px;
-    font-family: Instrument Sans;
-}
-
-.elementosLembrete .tituloLembrete h6{
-    font-size: 17px;
     font-family: Montserrat;
-    font-weight: 500;
+    line-height: 1;
 }
 
-.confirmaLembrete button{
-    border: none;
-    background-color: #055D96;
-    width: 107px;
-    height: 35px;
+.legendaTotalPontos{
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+/* Barra de progresso */
+.barraProgresso{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.labelBarra{
+    font-size: 11px;
+    color: #888;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.trilhaBarra{
+    width: 100%;
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Preenchimento — 18 de 25 = 72% */
+.preenchimentoBarra{
+    width: 72%;
+    height: 100%;
+    background-color: #1565C0;
+    border-radius: 10px;
+}
+
+.extremosBarra{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: #888;
+    font-family: Instrument Sans;
+}
+
+/* Linhas de detalhes de pontos */
+.detalhePontos{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    background-color: #f5f5f5;
     border-radius: 6px;
-    font-size: 12.4px;
-    color: #ffffff;
-    font-weight: 400;
-    cursor: pointer;
-    user-select: none;
+    padding: 10px 12px;
 }
 
-.elementosLembrete .confirmaLembrete .botoesLembrete{
-    gap: 5px;
+.linhaPonto{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.botoesLembrete .um{
-    background-color: #0079C8;
-    transition: 0.15s;
+.labelPonto{
+    font-size: 12px;
+    color: #555;
+    font-family: Instrument Sans;
 }
 
-.botoesLembrete .um:hover{
-    background-color: #00548b;
+.valorPonto{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1565C0;
+    font-family: Instrument Sans;
 }
 
-.botoesLembrete .dois{
-    background-color: #00335B;
-    transition: 0.15s;
+/* Sequência atual */
+.sequenciaAtual{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: auto;
+    width: 100%;
+    border-top: 0.5px solid #e5e7eb;
+    padding-top: 10px;
 }
 
-.botoesLembrete .dois:hover{
-    background-color: #001b30;
+.labelSequencia{
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+    font-family: Instrument Sans;
 }
 
+.textoSequencia{
+    font-size: 12px;
+    font-weight: 600;
+    color: #1a2e4a;
+    margin: 0;
+    font-family: Instrument Sans;
+}
+
+.iconsSequencia{
+    display: flex;
+    gap: 6px;
+    color: #f59e0b;
+    font-size: 16px;
+}
